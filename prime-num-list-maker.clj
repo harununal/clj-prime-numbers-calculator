@@ -13,7 +13,7 @@
  that smaller than this number or equal to this
  (pnl-maker 20) ;=> [2 3 5 7 11 13 17 19]
  (pnl-maker 7) ;=> [2 3 5 7] "
-[max-val
+[max-val]
 (if (>= max-val 2)
     (loop [pn-list [2]
            pn-? 3]
