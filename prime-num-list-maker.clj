@@ -38,7 +38,7 @@
 
 (defn nth-prime
 "This function given that what a number's ranking in prime numbers list.
-(nth-prime 17)
+(nth-prime 17) ;=>
 17 is 7. prime-number
 [2 3 5 7 11 13 17] "
 [a-num]
