@@ -1,7 +1,7 @@
 
 (defn fold-?
 "
- This function takes a *prime-numbers list* and creates anonymous function.
+ This function takes a *prime-numbers list* and creates an anonymous function.
  Unnamed function checks if a number is fold to any numbers in prime-numbers list.
  
  (map (fold-? 20) [2 3 5 7])
