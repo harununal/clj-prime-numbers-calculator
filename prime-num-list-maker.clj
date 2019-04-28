@@ -14,7 +14,7 @@
  (pnl-maker 20) ;=> [2 3 5 7 11 13 17 19]
  (pnl-maker 7) ;=> [2 3 5 7] "
 [max-val]
-(if (>= max-val 2)
+(if (and (>= max-val 2) (integer? max-val))
     (loop [pn-list [2]
            pn-? 3]
           (if (< max-val pn-?)
@@ -23,7 +23,8 @@
                     (if (some true? (map (fold-? pn-?) pn-list))
                         pn-list
                         (conj pn-list pn-?))
-                    (inc pn-?))))))
+                    (inc pn-?))))
+    (str "Please insert an integer bigger than 2 or equal")))
 
 ;;;;;;;;;;;;;;;;;; fold-? and pnl-number-list is inseperable ;;;;;;;;;;;;;;;;;;;;
 
@@ -33,8 +34,13 @@
 [a-num]
 (= (apply max (pnl-maker a-num)) a-num))
 
+;;;;;;;;;;;;;
+
 (defn nth-prime
-""
+"This function given that what a number's ranking in prime numbers list.
+(nth-prime 17)
+17 is 7. prime-number
+[2 3 5 7 11 13 17] "
 [a-num]
 (if prime-?
 (str a-num " is " (count (pnl-maker a-num)) ". prime-number.")
