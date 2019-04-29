@@ -5,3 +5,10 @@
  
 * **(pnl-maker 7)** ;=> [2 3 5 7]
 
+* **(pnl-maker 1)** ;=> "Please insert an integer bigger than 2 or equal"
+
+### 2. Check if a number is a prime-number :
+* **(prime-? 7919)** ;=> true
+
+### 3. A number's ranking in prime-numbers list :
+* **(nth-prime 17)**
