@@ -71,7 +71,8 @@
 (defn pnl-calc
  [val]
 (if (and (integer? val)(>val 1))
-)
+(prn-prime-list val)
+(prn "Please insert an integer bigger than 2 or equal"))
 
 
 
