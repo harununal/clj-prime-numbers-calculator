@@ -61,16 +61,15 @@
 
 (defn pnl-calc
  [val]
- (if (and (integer? val)
-      (> val 1)
-      (prime-? val))
-  (prn (str val " is " (count (pnl-maker val)) ". prime-number. 
-            Prime-numbers list that is smaller than " val " : ")
+ (if (and (integer? val)(> val 1)(prime-? val))
+   (if (fold-? val)
+   (prn (str val " is " (count (pnl-maker val)) ". prime-number. Prime-numbers they are smaller than " val " : ")
        (prn (pnl-maker val)))
        
-  (prn (str val " is not a prime-number. " val " can be divided this prime-numbers : ")
-       (div-list (fold-?) (pnl-maker val)))
+  (if (integer? val)
+   (prn (str val " is not a prime-number. " val " can be divided this prime-numbers : ")
+       (div-list (fold-?) (pnl-maker val))))
 
           
- 
+ (pnl-calc 20)
  
