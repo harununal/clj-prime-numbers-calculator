@@ -52,6 +52,13 @@
 
 ;;;
 
+(defn div-list
+ [bool-list pri-list]
+ (filter (:true (map bool-list pri-list))))
+
+
+;;;
+
 (defn pnl-calc
  [val]
  (if (and (integer? val)
@@ -59,10 +66,11 @@
       (prime-? val))
   (prn (str val " is " (count (pnl-maker val)) ". prime-number. 
             Prime-numbers list that is smaller than " val " : ")
+       (prn (pnl-maker val)))
        
   (prn (str val " is not a prime-number. " val " can be divided this prime-numbers : ")
-       )
-(prn (pnl-maker val)))
+       (div-list (fold-?) (pnl-maker val)))
+
           
  
  
