@@ -6,7 +6,7 @@
 [pn-?]
 #(integer? (/ pn-? %)))
 
-; (map (fold-? 20)[2 3 5 7])
+;;;
 
 (defn pnl-maker
 "This function take a number and create a prime numbers list 
@@ -26,9 +26,7 @@
                     (inc pn-?))))
     (str "pnl-maker :" "Please insert an integer bigger than 2 or equal")))
 
-;;;;;;;;;;;;;;;;;; fold-? and pnl-number-list is inseperable ;;;;;;;;;;;;;;;;;;;;
-
-;(pnl-maker 7)
+;;;
 
 (defn prime-?
 "This function is check if a number is a prime-number.
@@ -38,7 +36,8 @@
     (= (apply max (pnl-maker a-num)) a-num)
     (prn "prime-? :""Please insert an integer bigger than 2 or equal")))
 (prime-? 7)
-;;;;;;;;;;;;;
+
+;;;
 
 (defn nth-prime
 "This function given that what a number's ranking in prime numbers list.
@@ -51,5 +50,19 @@
 (prn (pnl-maker a-num)))
 (prn "This is not a prime number.")))
 
-(nth-prime 7)
-(nth-prime 6)
+;;;
+
+(defn pnl-calc
+ [val]
+ (if (and (integer? val)
+      (> val 1)
+      (prime-? val))
+  (prn (str val " is " (count (pnl-maker val)) ". prime-number. 
+            Prime-numbers list that is smaller than " val " : ")
+       
+  (prn (str val " is not a prime-number. " val " can be divided this prime-numbers : ")
+       )
+(prn (pnl-maker val)))
+          
+ 
+ 
