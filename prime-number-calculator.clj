@@ -2,7 +2,7 @@
 (defn divisor-test
   "Gets an integer and returns an anonymous function.
   The anonynous function is checks numbers in a list if are they aliquot/divisor for an integer.
-  (map (fold-test 20) [2 3 5 7]) ;=> (true false true false)  "
+  (map (divisor-test 20) [2 3 5 7]) ;=> (true false true false)  "
 [pn-?]
  #(integer? (/ pn-? %)))
 
