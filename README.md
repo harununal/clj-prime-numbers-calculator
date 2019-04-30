@@ -14,13 +14,11 @@
 > (time (prime-numbers-to 100000)) ; "Elapsed time: 18883.849173 msecs"
 
 ### 2. Check an integer if is it a prime-number :
-* **(prime-? 9973)** 
+***(prime-? 9973)** 
 ;=> true
 
 ### 3. Checks numbers in a list if are they aliquot/divisor for an integer :
 
-***(map (fold-test 60)***
-
-***[2 3 4 5 7 11 15 17 20 23 29 30 37 41 43 47] )***
+***(map (fold-test 60) [2 3 4 5 7 11 15 17 20 23 29 30 37 41 43 47] )***
 >;=> (true true true true false false true false true false false true false false false false)
 
