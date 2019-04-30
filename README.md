@@ -15,7 +15,7 @@
 
 ### 2. Check an integer if is it a prime-number :
 ***(prime-? 9973)***
-;=> true
+>;=> true
 
 ### 3. Checks numbers in a list if are they aliquot/divisor for an integer :
 
