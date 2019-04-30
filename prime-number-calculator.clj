@@ -23,3 +23,11 @@
                     (inc pn-?)))))
 
 ;;;
+
+(defn prime-?
+  "Checks an integer is it  prime-number or not
+  (prime-? 9973) ;=> true "
+  [an-int]
+  (= (apply max (prime-numbers-to an-int)) an-int))
+
+;;;
