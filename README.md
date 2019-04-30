@@ -14,7 +14,7 @@
 > (time (prime-numbers-to 100000)) ; "Elapsed time: 18883.849173 msecs"
 
 ### 2. Check an integer if is it a prime-number :
-***(prime-? 9973)** 
+***(prime-? 9973)***
 ;=> true
 
 ### 3. Checks numbers in a list if are they aliquot/divisor for an integer :
