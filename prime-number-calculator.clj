@@ -16,8 +16,7 @@
        pn-? 3]
       (if (< max-val pn-?)
            pn-list
-          (recur 
-                 if (some true? (map (divisor-test pn-?) pn-list))
+          (recur if (some true? (map (divisor-test pn-?) pn-list))
                      pn-list
                     (conj pn-list pn-?))
                  (inc pn-?)))))
