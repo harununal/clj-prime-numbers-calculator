@@ -19,7 +19,7 @@
           (recur if (some true? (map (divisor-test pn-?) pn-list))
                      pn-list
                     (conj pn-list pn-?))
-                 (inc pn-?)))))
+                 (inc pn-?))))
 
 ;;;
 
