@@ -4,7 +4,7 @@
   The anonynous function is checks numbers in a list if are they aliquot/divisor for an integer.
   (map (divisor-test 20) [2 3 5 7]) ;=> (true false true false)  "
 [pn-?]
- #(integer? (/ pn-? %)))
+#(integer? (/ pn-? %)))
 
 ;;;
 
@@ -13,14 +13,14 @@
   (prime-numbers-to 20) ;=> [2 3 5 7 11 13 17 19] "
 [max-val]
 (loop [pn-list [2]
-           pn-? 3]
-          (if (< max-val pn-?)
-              pn-list
-              (recur 
-                    (if (some true? (map (divisor-test pn-?) pn-list))
-                        pn-list
-                        (conj pn-list pn-?))
-                    (inc pn-?)))))
+       pn-? 3]
+      (if (< max-val pn-?)
+           pn-list
+          (recur 
+                 if (some true? (map (divisor-test pn-?) pn-list))
+                     pn-list
+                    (conj pn-list pn-?))
+                 (inc pn-?)))))
 
 ;;;
 
